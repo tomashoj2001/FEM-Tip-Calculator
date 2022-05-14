@@ -54,9 +54,9 @@ function calculate() {
 
     let tip = (totalBill * totalPercentage / 100) / totalPeople,
         price = (totalBill / totalPeople) + tip;
-
-    tipIndividual.textContent = tip;
-    totalIndividual.textContent = price;
+    
+    tipIndividual.textContent = tip.toFixed(2);
+    totalIndividual.textContent = price.toFixed(2);
     
     reset.classList.add('active');
     reset.addEventListener('click', resetBtn);
