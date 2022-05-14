@@ -54,7 +54,7 @@ function calculate() {
 
     let tip = (totalBill * totalPercentage / 100) / totalPeople,
         price = (totalBill / totalPeople) + tip;
-    
+
     tipIndividual.textContent = tip.toFixed(2);
     totalIndividual.textContent = price.toFixed(2);
     
@@ -63,7 +63,13 @@ function calculate() {
 }
 
 function resetBtn() {
+    bill.value = '';
+    people.value = '';
+
     reset.classList.remove('active');
+    percentage.forEach(x => x.classList.remove('active'));
+    percentageCustom.classList.remove('active');
+    
     tipIndividual.textContent = "0.00";
     totalIndividual.textContent = "0.00";
 }
