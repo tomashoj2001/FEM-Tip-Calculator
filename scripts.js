@@ -66,6 +66,10 @@ function resetBtn() {
     bill.value = '';
     people.value = '';
 
+    BillAmount = 0;
+    PercentageAmount = 0;
+    PeopleAmount = 0;
+    
     reset.classList.remove('active');
     percentage.forEach(x => x.classList.remove('active'));
     percentageCustom.classList.remove('active');
