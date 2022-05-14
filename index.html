@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="images/logo.svg" alt="logo Splitter">
+  </header>
+
+  <main class="card">
+
+    <section class="setting">
+      <div class="bill">
+        <h1 class="title">Bill</h1>
+        <input type="number" class="amount" min="0">
+        <img src="images/icon-dollar.svg" alt="icon-dollar" class="amount__img">
+      </div>
+
+      <div class="percentage">
+        <h2 class="title">Select Tip %</h2>
+        <div class="percentage__select">
+          <p class="percentage__btn" data-value="5">5%</p>
+          <p class="percentage__btn" data-value="10">10%</p>
+          <p class="percentage__btn" data-value="15">15%</p>
+          <p class="percentage__btn" data-value="25">25%</p>
+          <p class="percentage__btn" data-value="50">50%</p>
+          <input type="number" class="percentage__btn percentage__btn--input" placeholder="Custom" min="0">
+        </div>
+      </div>
+
+      <div class="people">
+        <h2 class="title">Number of People</h2>
+        <input type="number" class="amount" min="0">
+        <img src="images/icon-person.svg" alt="icon-person" class="amount__img">
+        <p class="wrong">Can´t be zero</p>
+      </div>
+    </section>
+
+    <section class="total">
+      <div class="total__tip">
+        <h2>Tip Amount</h2>
+        <p>/ person</p>
+        <h3>$0.00</h3>
+      </div>
+      <div class="total__price">
+        <h2>Total</h2>
+        <p>/ person</p>
+        <h3>$0.00</h3>
+      </div>
+      <p class="total__btn">RESET</p>
+    </section>
+  </main>
+  
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/tomashoj2001">Tomi Hojnadel</a>.
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
