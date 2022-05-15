@@ -69,7 +69,6 @@ header img {
     background-color: var(--Very-light-grayish-cyan);
     border: none;
     border-radius: 0.5rem;
-    transition: all 0.2s ease-in-out;
 }
 
 .amount__img {
@@ -101,7 +100,6 @@ header img {
     color: var(--White);
     border-radius: 0.5rem;
     cursor: pointer;
-    transition: all 0.2s ease-in-out;
 }
 
 .percentage__btn[data-value]:hover {
@@ -117,8 +115,9 @@ header img {
 .percentage__btn--input {
     background-color: var(--Very-light-grayish-cyan);
     color: var(--Very-dark-cyan);
+    font-family: 'Space Mono', monospace;
+    font-size: 1.2rem;
     border: none;
-    transition: all 0.2s ease-in-out;
 }
 
 .percentage__btn--input:hover {
@@ -132,7 +131,6 @@ header img {
     top: 1.5rem;
     right: 1rem;
     transform: scale(0);
-    transition: all 0.2s ease-in-out;
 }
 
 
@@ -178,6 +176,10 @@ p.total__btn {
     font-size: 24px;
     color: var(--Very-dark-cyan);
     background-color: var(--Dark-grayish-cyan);
+    
+}
+
+.amount, .wrong, .percentage__btn, p.total__btn{
     transition: all 0.2s ease-in-out;
 }
 
@@ -186,7 +188,7 @@ footer {
 }
 
 
-/* JAVASCRIPT */
+        /* JAVASCRIPT */
 
 .percentage__btn.active {
     color: var(--Very-dark-cyan);
@@ -196,7 +198,6 @@ footer {
 p.total__btn.active {
     background-color: var(--Strong-cyan);
     cursor: pointer;
-    transition: all 0.2s ease-in-out;
 }
 
 p.total__btn.active:hover {
@@ -209,4 +210,58 @@ p.total__btn.active:hover {
 
 .amount.error {
     border: red 2px solid;
+}
+
+
+        /* RESPONSIVE DESIGN */
+
+@media screen and (min-width: 700px) {
+    .card {
+        width: 92vw;
+        margin: auto;
+        border-radius: 2rem;
+        padding: 2rem;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    .setting {
+        margin-right: 1rem;
+    }
+    .percentage__select {
+        grid-template-columns: repeat(3, 30%);
+    }
+    .total {
+        padding: 1rem;
+        border-radius: .75rem;
+        position: relative;
+    }
+    .total__price {
+        margin-top: 4rem;
+    }
+    p.total__btn {
+        width: auto;
+        position: absolute;
+        bottom: 2rem;
+        right: 2rem;
+        left: 2rem;
+    }
+    footer {
+        display: initial;
+        position: fixed;
+        bottom: 1rem;
+        width: 100%;
+        z-index: -1;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    header img {
+        margin: 3rem auto;
+    }
+    .card {
+        width: 75vw;
+    }
+    .total {
+        padding: 2rem;
+    }
 }
