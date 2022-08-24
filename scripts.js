@@ -48,12 +48,8 @@ function showError() {
 }
 
 function calculate() {
-    const totalBill = BillAmount,
-        totalPercentage = PercentageAmount,
-        totalPeople = PeopleAmount;
-
-    let tip = (totalBill * totalPercentage / 100) / totalPeople,
-        price = (totalBill / totalPeople) + tip;
+    let tip = (BillAmount * PercentageAmount / 100) / PeopleAmount,
+        price = (BillAmount / PeopleAmount) + tip;
 
     tipIndividual.textContent = tip.toFixed(2);
     totalIndividual.textContent = price.toFixed(2);
@@ -69,11 +65,11 @@ function resetBtn() {
     BillAmount = 0;
     PercentageAmount = 0;
     PeopleAmount = 0;
-    
+
     reset.classList.remove('active');
     percentage.forEach(x => x.classList.remove('active'));
     percentageCustom.classList.remove('active');
-    
+
     tipIndividual.textContent = "0.00";
     totalIndividual.textContent = "0.00";
 }
